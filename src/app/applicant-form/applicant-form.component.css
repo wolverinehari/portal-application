@@ -1,0 +1,11 @@
+
+hot-table>.handsontable{
+    height: 150px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+}
+.wtHolder{
+    position: relative !important;
+    width: 100% !important;
+    height: 150px !important;
+}

@@ -7,6 +7,7 @@ import { ApplicantFormComponent } from './applicant-form/applicant-form.componen
 import { SelectBoxComponent } from './select-box/select-box.component';
 import { InputBoxComponent } from './input-box/input-box.component';
 import { TextAreaComponent } from './text-area/text-area.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { TextAreaComponent } from './text-area/text-area.component';
     ApplicantFormComponent,
     SelectBoxComponent,
     InputBoxComponent,
-    TextAreaComponent
+    TextAreaComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
