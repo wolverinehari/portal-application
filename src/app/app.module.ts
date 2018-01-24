@@ -12,6 +12,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddorremovedataComponent } from './addorremovedata/addorremovedata.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { StatusComponent } from './status/status.component';
+import { AffliationComponent } from './affliation/affliation.component';
+import { PositionComponent } from './position/position.component';
+import { AlternatepositionComponent } from './alternateposition/alternateposition.component';
+import { TeamComponent } from './team/team.component';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { StatusComponent } from './status/status.component';
     TextAreaComponent,
     NavbarComponent,
     AddorremovedataComponent,
-    StatusComponent
+    StatusComponent,
+    AffliationComponent,
+    PositionComponent,
+    AlternatepositionComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

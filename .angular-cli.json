@@ -24,6 +24,7 @@
         "styles.css"
       ],
       "scripts": [
+        "../node_modules/modernizr/bin/modernizr"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
