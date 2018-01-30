@@ -39,7 +39,12 @@
     <app-select-box [selectData]='reviewd'></app-select-box>
   </div>
   <div class="col-lg-4">
-    <app-input-box [label]="'Reviewd by Soyal Date:'" [id]="'datesoyal'" [type]="'date'"></app-input-box>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+   <!-- <app-input-box [label]="'Reviewd by Soyal Date:'" [id]="'datesoyal'" [type]="'date'"></app-input-box> -->
   </div>
   <div class="col-lg-4">
     <app-input-box [label]="'Sent_to_Dept:'" [id]="'senttodept'" [type]="'text'"></app-input-box>
