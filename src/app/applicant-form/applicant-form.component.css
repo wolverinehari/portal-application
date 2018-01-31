@@ -9,3 +9,6 @@ hot-table>.handsontable{
     width: 100% !important;
     height: 150px !important;
 }
+.topPadding{
+    padding-top:20px;
+}

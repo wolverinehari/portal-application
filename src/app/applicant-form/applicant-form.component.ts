@@ -44,7 +44,8 @@ export class ApplicantFormComponent implements OnInit {
   ngOnInit() {
    // this.renderSpreadsheet();
   }
-  tableData:Object=this.renderSpreadsheet();
+
+  /*tableData:Object=this.renderSpreadsheet();
   renderSpreadsheet(): Object {
     var dataObject = [{
       id: 1,
@@ -122,5 +123,7 @@ export class ApplicantFormComponent implements OnInit {
       dropdownMenu: true
     };
     return tableSettings;
-  }
+  }*/
 }
+
+

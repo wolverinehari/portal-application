@@ -16,77 +16,10 @@ import { AffliationComponent } from './affliation/affliation.component';
 import { PositionComponent } from './position/position.component';
 import { AlternatepositionComponent } from './alternateposition/alternateposition.component';
 import { TeamComponent } from './team/team.component';
-import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatStepperModule,
-} from '@angular/material';
+import { DisplaytableComponent } from './displaytable/displaytable.component';
+import { DemoMaterialModule } from './app.materialmodule';
 
 
-@NgModule({
-  exports: [
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatStepperModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
-  ]
-})
-export class DemoMaterialModule {}
 
 @NgModule({
   declarations: [
@@ -101,7 +34,8 @@ export class DemoMaterialModule {}
     AffliationComponent,
     PositionComponent,
     AlternatepositionComponent,
-    TeamComponent
+    TeamComponent,
+    DisplaytableComponent
   ],
   imports: [
     BrowserModule,
@@ -110,7 +44,6 @@ export class DemoMaterialModule {}
     AppRoutingModule,
     FormsModule, 
     DemoMaterialModule,
-    MatNativeDateModule,
     ReactiveFormsModule,
   ],
   providers: [],
