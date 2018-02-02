@@ -27,8 +27,14 @@ export class DisplaytableComponent implements OnInit {
   }
   tableContentStatusChange(data:Element){
     this.dataObject.push(data);
+    //this.dataSource.data.push(data)
     this.dataSource = new MatTableDataSource<Element>(this.dataObject);
     
    //this.dataObject=this.dataSource.data;
+  }
+  deleteItem(id:any){
+       //this.dataObject=this.dataObject.filter(item=>item.id!=id)
+       this.dataSource.data=this.dataSource.data.filter(item=>item.id!=id)
+     console.log('id',this.dataSource)
   }
 }
