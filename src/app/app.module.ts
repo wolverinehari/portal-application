@@ -18,7 +18,9 @@ import { AlternatepositionComponent } from './alternateposition/alternatepositio
 import { TeamComponent } from './team/team.component';
 import { DisplaytableComponent } from './displaytable/displaytable.component';
 import { DemoMaterialModule } from './app.materialmodule';
-
+import { DatadialogComponent } from './datadialog/datadialog.component';
+import {Dialogcontent} from './datadialog/dialogcontent';
+import{ConstantdataService} from './constantdata.service'
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { DemoMaterialModule } from './app.materialmodule';
     PositionComponent,
     AlternatepositionComponent,
     TeamComponent,
-    DisplaytableComponent
+    DisplaytableComponent,
+    DatadialogComponent,
+    Dialogcontent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,8 @@ import { DemoMaterialModule } from './app.materialmodule';
     DemoMaterialModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  entryComponents: [DatadialogComponent, Dialogcontent],
+  providers: [ConstantdataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 <div class="example-container mat-elevation-z8">
-  <mat-table #table [dataSource]="dataSource">
+  <mat-table #table [(dataSource)]="dataSource">
 
     <!-- Position Column -->
     <ng-container matColumnDef="id">
@@ -31,13 +31,10 @@
     </ng-container>
     <ng-container matColumnDef="Edit sec">
       <mat-header-cell *matHeaderCellDef>Edit sec &nbsp;
-        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Add row</button>
+       <app-datadialog [(tableContent)]="dataSource" (tableContentStatusChange)="tableContentStatusChange($event)"[isEditsec]='false'></app-datadialog>
       </mat-header-cell>
       <mat-cell *matCellDef="let element">
-        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></button>
-        <button type="button" class="btn btn-default">
-                 <span class="glyphicon glyphicon-remove removeColor"></span> 
-          </button>
+       <app-datadialog [(tableContent)]="dataSource" (tableContentStatusChange)="tableContentStatusChange($event)" [isEditsec]='true'></app-datadialog>
       </mat-cell>
     </ng-container>
 

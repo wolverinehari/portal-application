@@ -8,8 +8,10 @@ import {Selectdata} from '../selectdata';
 })
 export class SelectBoxComponent implements OnInit {
 @Input() selectData:Selectdata;
+@Input() ivalue:string;
   constructor() { }
   ngOnInit() {
+    console.log(this.ivalue)
   }
 
 }

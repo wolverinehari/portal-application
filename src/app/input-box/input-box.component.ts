@@ -9,6 +9,7 @@ export class InputBoxComponent implements OnInit {
   @Input() label:string;
   @Input() id:string;
   @Input() type:string;
+  @Input() ivalue:string;
   
   constructor() {
     
@@ -16,5 +17,5 @@ export class InputBoxComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }

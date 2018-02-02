@@ -1,0 +1,73 @@
+<h1 mat-dialog-title>Table Data</h1>
+<div mat-dialog-content>
+  <!-- <mat-form-field>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field> -->
+  <div class="row">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-8">
+      <div class="form-group">
+        <label for="">ID</label>
+        <input type="text" class="form-control" id="modalid" [(ngModel)]="data.id">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-8">
+      <div class="form-group">
+        <label for="">Interview date:</label>
+       <!-- <input type="text" class="form-control" id="modalinterviewdate" [(ngModel)]="data.interviewdate">-->
+           <mat-form-field>
+            <input  [(ngModel)]="data.interviewdate" matInput [matDatepicker]="picker" placeholder="Interview Date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+           </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-8">
+      <div class="form-group">
+        <label for="">Interview time:</label>
+        <input type="text" class="form-control" id="modalinterviewtime" [(ngModel)]="data.interviewtime">
+      </div>
+      <!--   <app-input-box [label]="'Interview time:'" [id]="'modalinterviewtime'" [type]="'text'"  [(ivalue)]="data.interviewtime"></app-input-box> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-8">
+      <div *ngIf="interviewtype" class="form-group">
+        <label>{{interviewtype.name}}</label>
+        <input attr.list="{{interviewtype.id}}" name="{{interviewtype.name}}" class="form-control" [(ngModel)]="data.interviewtype">
+        <datalist id="{{interviewtype.id}}">
+          <option *ngFor="let item of interviewtype.values" value="{{item}}"></option>
+        </datalist>
+      </div>
+      <!-- <app-select-box [selectData]='interviewtype' [(ivalue)]="data.interviewtype"></app-select-box> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-8">
+      <div class="form-group">
+        <label for="">Primary Interviewer:</label>
+        <input type="text" class="form-control" id="modalpinterviewer" [(ngModel)]="data.primaryinterviewer">
+      </div>
+      <!-- <app-input-box [label]="'Primary Interviewer:'" [id]="'modalpinterviewer'" [type]="'text'"  [(ivalue)]="data.primaryinterviewer"></app-input-box>-->
+
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <!--<button class="btn btn-primary"  [mat-dialog-close]="data.animal" cdkFocusInitial>Submit</button> &nbsp;&nbsp;-->
+  <button class="btn btn-primary" [mat-dialog-close]="data" cdkFocusInitial>Submit</button> &nbsp;&nbsp;
+  <button class="btn btn-default" (click)="onNoClick()">Cancel</button>
+</div>
