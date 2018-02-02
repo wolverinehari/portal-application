@@ -31,10 +31,10 @@
     </ng-container>
     <ng-container matColumnDef="Edit sec">
       <mat-header-cell *matHeaderCellDef>Edit sec &nbsp;
-       <app-datadialog [(tableContent)]="dataSource" (tableContentStatusChange)="tableContentStatusChange($event)"[isEditsec]='false'></app-datadialog>
+       <app-datadialog [tableContent]="dataSource" (tableContentStatusChange)="tableContentStatusChange($event)"[isEditsec]='false'></app-datadialog>
       </mat-header-cell>
       <mat-cell *matCellDef="let element">
-       <app-datadialog [(tableContent)]="dataSource" (tableContentStatusChange)="tableContentStatusChange($event)" [isEditsec]='true'></app-datadialog>
+       <app-datadialog [tableContent]="dataSource" (tableContentStatusChange)="tableContentStatusChange($event)" [isEditsec]='true'></app-datadialog>
        <button type="button" class="btn btn-default" (click)="deleteItem(element.id)"><span class="glyphicon glyphicon-remove removeColor"></span></button>
       </mat-cell>
     </ng-container>

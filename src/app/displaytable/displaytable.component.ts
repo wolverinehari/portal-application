@@ -26,7 +26,7 @@ export class DisplaytableComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
   tableContentStatusChange(data:Element){
-    this.dataObject.push(data);
+    this.dataObject.push(JSON.parse(JSON.stringify(data)));
     //this.dataSource.data.push(data)
     this.dataSource = new MatTableDataSource<Element>(this.dataObject);
     
