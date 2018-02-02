@@ -11,7 +11,7 @@ export class SelectBoxComponent implements OnInit {
 @Input() ivalue:string;
   constructor() { }
   ngOnInit() {
-    console.log(this.ivalue)
+   // console.log(this.ivalue)
   }
 
 }
