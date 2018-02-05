@@ -7,10 +7,13 @@ import { AffliationComponent } from './affliation/affliation.component';
 import { PositionComponent } from './position/position.component';
 import { AlternatepositionComponent } from './alternateposition/alternateposition.component';
 import { TeamComponent } from './team/team.component';
+import { LoginComponent } from './login/login.component';
+
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/applicantform', pathMatch: 'full' },
+  {path: '', redirectTo: '/login', pathMatch: 'full' },
+  {path: 'login', component: LoginComponent},
   {path: 'status', component: StatusComponent},
   {path: 'applicantform', component: ApplicantFormComponent},
   {path:'affliation',component:AffliationComponent},

@@ -20,7 +20,8 @@ import { DisplaytableComponent } from './displaytable/displaytable.component';
 import { DemoMaterialModule } from './app.materialmodule';
 import { DatadialogComponent } from './datadialog/datadialog.component';
 import {Dialogcontent} from './datadialog/dialogcontent';
-import{ConstantdataService} from './constantdata.service'
+import{ConstantdataService} from './constantdata.service';
+import { LoginComponent } from './login/login.component'
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import{ConstantdataService} from './constantdata.service'
     TeamComponent,
     DisplaytableComponent,
     DatadialogComponent,
-    Dialogcontent
+    Dialogcontent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
