@@ -31,7 +31,7 @@ export class DatadialogComponent {
   openDialog(): void {
     var data;
     if(!!this.itemid){
-        data=this.tableContent.data.filter(item=>item.id==this.itemid)[0]
+      // data=this.tableContent.data.filter(item=>item.id==this.itemid)[0]
         console.log(data);
     }else{
       data=this.dataObj;
@@ -50,7 +50,7 @@ export class DatadialogComponent {
       // this.constantdataService.setTables(this.tableContent)+
        //if()
        if(!!result){
-          result.interviewdate=result.interviewdate.getMonth()+'/'+result.interviewdate.getDate()+'/'+result.interviewdate.getFullYear()//new Date(result.interviewdate.getMonth()+''+result.interviewdate.getDate(),result.interviewdate.getFullYear())
+          result.interviewdate=(result.interviewdate.getMonth()+1)+'/'+result.interviewdate.getDate()+'/'+result.interviewdate.getFullYear()//new Date(result.interviewdate.getMonth()+''+result.interviewdate.getDate(),result.interviewdate.getFullYear())
           this.tableContentStatusChange.emit(result);
        }
      //Dialogcontent.push(this.dataObj)
