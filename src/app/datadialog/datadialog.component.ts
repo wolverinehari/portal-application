@@ -31,12 +31,9 @@ export class DatadialogComponent {
   openDialog(): void {
     var data;
     if(!!this.itemid){
-      // data=this.tableContent.data.filter(item=>item.id==this.itemid)[0]
-        console.log(data);
+       data=this.tableContent.data.filter(item=>item.id==this.itemid)[0]
     }else{
       data=this.dataObj;
-        console.log(data);
-      
     }
       let dialogRef = this.dialog.open(Dialogcontent, {
         width: '450px',

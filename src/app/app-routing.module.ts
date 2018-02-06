@@ -8,6 +8,8 @@ import { PositionComponent } from './position/position.component';
 import { AlternatepositionComponent } from './alternateposition/alternateposition.component';
 import { TeamComponent } from './team/team.component';
 import { LoginComponent } from './login/login.component';
+import { SearchapplicantComponent } from './searchapplicant/searchapplicant.component';
+
 
 
 
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path:'affliation',component:AffliationComponent},
   {path:'position',component:PositionComponent},
   {path:'alternateposition',component:AlternatepositionComponent},
-  {path:'team',component:TeamComponent}
+  {path:'team',component:TeamComponent},
+  {path:'searchapplicant',component:SearchapplicantComponent}
+  
 ]
 @NgModule({
   exports: [

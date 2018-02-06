@@ -8,12 +8,10 @@ import {Router} from '@angular/router'
     encapsulation:ViewEncapsulation.None
 })
 export class LoginComponent implements OnInit {
-
   constructor(private router:Router) { }
-
   ngOnInit() {
   }
- loginData():void{
+  loginData():void{
    this.router.navigate(['/applicantform']);
  }
 }

@@ -21,7 +21,8 @@ import { DemoMaterialModule } from './app.materialmodule';
 import { DatadialogComponent } from './datadialog/datadialog.component';
 import {Dialogcontent} from './datadialog/dialogcontent';
 import{ConstantdataService} from './constantdata.service';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import { SearchapplicantComponent } from './searchapplicant/searchapplicant.component'
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { LoginComponent } from './login/login.component'
     DisplaytableComponent,
     DatadialogComponent,
     Dialogcontent,
-    LoginComponent
+    LoginComponent,
+    SearchapplicantComponent
   ],
   imports: [
     BrowserModule,

@@ -27,3 +27,59 @@
       primaryinterviewer: 'Kamal'
     }
   ]
+
+   export let existingApplicantObj = [{
+      id: 1,
+      name: 'Dhanus',
+      skill:'Frontend'
+    },{
+      id: 2,
+      name: 'Vijay',
+      skill:'Backend'
+    },
+    {
+      id: 3,
+      name: 'Rajini',
+      skill:'Database'
+    },
+    {
+      id: 4,
+      name: 'Kamal',
+      skill:'Devops'
+    },
+    {
+      id: 5,
+      name: 'Ajith',
+      skill:'Database'
+    },
+    {
+      id: 6,
+      name: 'Pawan',
+      skill:'Devops'
+    },
+    {
+      id: 7,
+      name: 'Balaiya',
+      skill:'Database'
+    },
+    {
+      id: 8,
+      name: 'Siranjeevi',
+      skill:'Backend'
+    },
+    {
+      id: 8,
+      name: 'Samburnesh',
+      skill:'Java developer'
+    },
+    {
+      id: 9,
+      name: 'Rana',
+      skill:'HTML designer'
+    },
+    {
+      id: 10,
+      name: 'Prabas',
+      skill:'UI designer'
+    }
+  ]
