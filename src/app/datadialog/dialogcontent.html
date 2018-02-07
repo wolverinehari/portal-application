@@ -1,8 +1,5 @@
 <h1 mat-dialog-title>Table Data</h1>
 <div mat-dialog-content>
-  <!-- <mat-form-field>
-    <input matInput [(ngModel)]="data.animal">
-  </mat-form-field> -->
   <div class="row">
     <div class="col-lg-2">
     </div>
@@ -19,8 +16,7 @@
     <div class="col-lg-8">
       <div class="form-group">
         <label for="">Interview date:</label>
-       <!-- <input type="text" class="form-control" id="modalinterviewdate" [(ngModel)]="data.interviewdate">-->
-           <mat-form-field>
+          <mat-form-field>
             <input  [(ngModel)]="data.interviewdate" matInput [matDatepicker]="picker" placeholder="Interview Date">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>

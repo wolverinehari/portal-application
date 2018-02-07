@@ -12,9 +12,6 @@ import { of } from 'rxjs/observable/of';
 export class ConstantdataService {
   alltabledataObject:Element[]=tabledataObject
   constructor() { }
-   // getHeroes(): Observable<Element[]> {
-  //  return of(tabledataObject);
-  // }
   getExistingApplicant():ExistingApplicant[]{
     return existingApplicantObj;
   }

@@ -7,15 +7,12 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title = 'app';
-  islogin:boolean;
+islogin:boolean;
  constructor(private route: ActivatedRoute, private router: Router) {
-    this.router.events.subscribe(event => {
-      if (event.constructor.name === "NavigationStart") {
-        this.islogin = event.url.indexOf('login') >= 0 || event.url.length<=1 ? false : true;
-        console.log(this.islogin,event);
+    this.router.events.subscribe((event) => {
+      if (event.constructor.name === "NavigationEnd") {
+        this.islogin =!(window.location.pathname.indexOf('login') >= 0 || window.location.pathname.length<=1);
       }
     })
-     //const id = +this.route.
   }
 }
