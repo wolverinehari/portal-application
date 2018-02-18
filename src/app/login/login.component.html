@@ -7,8 +7,11 @@
       <div class="col-lg-3">
       </div>
       <div class="col-lg-6">
-        <app-input-box [label]="'User name:'" [id]="'uname'" [type]="'text'"></app-input-box>
-        <app-input-box [label]="'Passowrd:'" [id]="'pword'" [type]="'password'"></app-input-box>
+        <app-input-box [label]="'User name:'" [id]="'username'" (ivaluechange)='valuechange($event)' [type]="'text'"></app-input-box>
+        <app-input-box [label]="'Passowrd:'" [id]="'password'" (ivaluechange)='valuechange($event)' [type]="'password'"></app-input-box>
+        <div *ngIf="isError" class="panel panel-danger">
+          <div class="panel-heading">Login Failed. Username or Passowrd wrong!.</div>
+        </div>
       </div>
     </div>
     <div class="row">
