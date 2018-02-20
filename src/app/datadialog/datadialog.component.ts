@@ -22,7 +22,6 @@ export class DatadialogComponent {
     primaryinterviewer: ''
   }
   constructor(public dialog: MatDialog, public constantdataService: ConstantdataService) {
-    // this.tableContent1 = constantdataService.getTables();
   }
   openDialog(): void {
     var data;

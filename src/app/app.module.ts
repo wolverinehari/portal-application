@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule }    from '@angular/common/http';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ApplicantFormComponent } from './applicant-form/applicant-form.component';
@@ -23,6 +25,8 @@ import{ConstantdataService} from './constantdata.service';
 import { LoginComponent } from './login/login.component';
 import { SearchapplicantComponent } from './searchapplicant/searchapplicant.component'
 
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { LocaldatasericeService }  from './localdataserice.service';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,10 @@ import { SearchapplicantComponent } from './searchapplicant/searchapplicant.comp
     FormsModule, 
     DemoMaterialModule,
     ReactiveFormsModule,
+    HttpClientModule,
+     HttpClientInMemoryWebApiModule.forRoot(
+      LocaldatasericeService, { dataEncapsulation: false }
+    )
   ],
   entryComponents: [DatadialogComponent, Dialogcontent],
   providers: [ConstantdataService],

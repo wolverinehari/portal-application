@@ -14,7 +14,7 @@ export class DisplaytableComponent implements OnInit {
   dataObject: Element[];
   dataSource:any;
   constructor(constantdataService: ConstantdataService) {
-    this.dataObject = constantdataService.getTables();
+    constantdataService.getTables().subscribe(dataObj => this.dataObject = dataObj);
     this.dataSource = new MatTableDataSource<Element>(this.dataObject);
   }
   ngOnInit() {

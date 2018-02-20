@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
   }
   loginData(): void {
     let logincheckdata = this.constantdataService.checkvalidLogin(this.logindata)
-    debugger;
     if (logincheckdata.length > 0) {
       this.router.navigate(['/applicantform']);
       this.isError = false;
