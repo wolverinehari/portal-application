@@ -25,7 +25,7 @@ export class SearchapplicantComponent implements OnInit {
     }
   }
   getApplicantData():void{
-    this.constantdataService.getExistingApplicant().subscribe(dataObj => this.ExistingDataAssign = dataObj);
-    this.ExistingData=this.ExistingDataAssign;
+    this.constantdataService.getExistingApplicant().subscribe(dataObj => {this.ExistingDataAssign = dataObj; this.ExistingData=this.ExistingDataAssign;});
+   
   }
 }

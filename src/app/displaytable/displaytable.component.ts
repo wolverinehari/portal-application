@@ -11,19 +11,22 @@ import { ConstantdataService } from '../constantdata.service';
   styleUrls: ['./displaytable.component.css']
 })
 export class DisplaytableComponent implements OnInit {
-  dataObject: Element[];
+  dataObject: any[]=[];
   dataSource:any;
-  constructor(constantdataService: ConstantdataService) {
-    constantdataService.getTables().subscribe(dataObj => this.dataObject = dataObj);
-    this.dataSource = new MatTableDataSource<Element>(this.dataObject);
+  constructor(private constantdataService: ConstantdataService) {
+   
   }
   ngOnInit() {
+    this.constantdataService.getTables().subscribe(dataobj =>{
+      this.dataObject=dataobj; 
+      this.dataSource = new MatTableDataSource<Element>(this.dataObject);
+      this.dataSource.paginator = this.paginator;
+    });
   }
-  
   displayColumnHeader = ['id', 'Interview date', 'Interview time', 'Interview type', 'Primary interviewer', 'Edit sec'];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
+    //this.dataSource.paginator = this.paginator;
   }
   tableContentStatusChange(data:Element){
  

@@ -27,7 +27,7 @@ export class ConstantdataService {
   }
   getTables(): Observable<Element[]> {
    // return of(this.alltabledataObject);
-   return this.http.get<any[]>('api/tabledataObject') 
+    return this.http.get<any[]>('api/tabledataObject')
   }
   setTables(data): void {
     //this.alltabledataObject.push(data);
